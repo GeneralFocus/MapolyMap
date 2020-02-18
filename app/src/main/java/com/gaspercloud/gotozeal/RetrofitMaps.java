@@ -18,19 +18,16 @@ public interface RetrofitMaps {
      * Retrofit get annotation with our URL
      * And our method that will return us details of student.
      */
-//    @GET("api/directions/json?key=AIzaSyC22GfkHu9FdgT9SwdCWMwKX1a4aohGifM")
-    //@GET("api/directions/json?key=AIzaSyAGujRe5zbOC9YzpiHCOBnE0BJYZ-RvIGI")
-    @GET("api/directions/json?key=AIzaSyDKVGF_OnLWj9lOPppNTH29BANogajV39Q")
+    @GET("api/directions/json?key=your_api_key")
     Call<Example> getDistanceDuration(@Query("units") String units, @Query("origin") String origin, @Query("destination") String destination, @Query("mode") String mode);
 
-    @GET("api/place/nearbysearch/json?rankby=distance&key=AIzaSyDKVGF_OnLWj9lOPppNTH29BANogajV39Q")
+    @GET("api/place/nearbysearch/json?rankby=distance&key=your_api_key")
     Call<NearbySearch> getNearestDistance(@Query("location") String location);
 
-    @GET("api/geocode/json?key=AIzaSyDKVGF_OnLWj9lOPppNTH29BANogajV39Q")
+    @GET("api/geocode/json?key=your_api_key")
     Call<NearbySearch> getGeocodeReverseAddress(@Query("location") String location);
 
-    //https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJN1t_tDeuEmsRUsoyG83frY4&fields=name,rating,formatted_phone_number&key=YOUR_API_KEY
-    @GET("api/place/details/json?key=AIzaSyDKVGF_OnLWj9lOPppNTH29BANogajV39Q")
+    @GET("api/place/details/json?key=your_api_key")
     Call<Detail> getDetails(@Query("place_id") String place_id);
 
 }
