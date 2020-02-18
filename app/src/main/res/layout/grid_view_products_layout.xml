@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!--androidx.cardview.widget.CardView
+            android:id="@+id/cardview_grid_category"
+            android:layout_width="@dimen/Width160"
+            android:layout_height="@dimen/height190"
+            android:layout_margin="@dimen/paddingImage"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_grid_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/paddingImage"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icon_grid_category"
+                    android:layout_width="@android:dimen/notification_large_icon_height"
+                    android:layout_height="@android:dimen/notification_large_icon_height"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/paddingImage"
+                    app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+                <TextView
+                    android:id="@+id/title_grid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/paddingImage"
+                    android:paddingLeft="@dimen/padding5"
+                    android:paddingRight="@dimen/padding5"
+                    android:text="TEST MAPOLY TOUR GUIDE CHECK ALRIGHT TEST CHECK TEST FILE YEA"
+                    android:textSize="@dimen/title_size"
+                    android:maxLines="3"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height1"
+                    android:layout_marginTop="@dimen/paddingImage"
+                    android:background="@color/colorGrey" />
+
+                <TextView
+                    android:id="@+id/description_grid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/paddingImage"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="4"
+                    android:padding="@dimen/padding5"
+                    android:text="@string/loading_success_message"
+                    android:textColor="@color/description"
+                    android:textSize="@dimen/description_size"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

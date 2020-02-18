@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="line">
+
+
+    <stroke android:color="@color/primaryLightColor"
+        android:width="@dimen/height2"
+        android:dashGap="@dimen/height2"
+        android:dashWidth="@dimen/cardElevation_gotozeal"
+        />
+
+
+</shape>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/layout_item_desc"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/paddingEight"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_weight="3"
+        android:background="@drawable/customborder"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/firstView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/marginTop30"
+            android:layout_marginTop="@dimen/margin_eight"
+            android:layout_marginBottom="@dimen/margin_eight">
+
+
+            <ImageView
+                android:id="@+id/iconinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
+                app:srcCompat="@drawable/ic_info_black_24dp" />
+
+
+            <TextView
+                android:id="@+id/order_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/cardElevation_gotozeal"
+                android:layout_marginLeft="@dimen/cardElevation_gotozeal"
+                android:layout_toEndOf="@id/iconinfo"
+                android:layout_toRightOf="@id/iconinfo"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:text="@string/app_name"
+                android:textSize="@dimen/description_size20"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/order_ref_no"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:text="@string/app_name"
+                android:textSize="@dimen/description_size14" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/secondView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/signupcard_margin"
+            android:layout_marginTop="@dimen/margin_eight"
+            android:layout_marginBottom="@dimen/margin_eight">
+
+            <ImageView
+                android:id="@+id/timecardhide"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_access_time_black_24dp" />
+
+            <TextView
+                android:id="@+id/order_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/cardElevation_gotozeal"
+                android:layout_marginLeft="@dimen/cardElevation_gotozeal"
+                android:layout_toEndOf="@id/timecardhide"
+                android:layout_toRightOf="@id/timecardhide"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:text="@string/app_name"
+                android:textSize="@dimen/description_size14" />
+
+
+            <ImageView
+                android:id="@+id/moreinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                app:srcCompat="@drawable/ic_call_black_24dp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_grid_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/paddingImage"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icon_grid_category"
+                android:layout_width="@android:dimen/notification_large_icon_height"
+                android:layout_height="@android:dimen/notification_large_icon_height"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/paddingImage"
+                app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+            <TextView
+                android:id="@+id/title_grid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/paddingImage"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/padding5"
+                android:paddingRight="@dimen/padding5"
+                android:text="@string/app_name"
+                android:textSize="@dimen/title_size"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height1"
+                android:layout_marginTop="@dimen/paddingImage"
+                android:background="@color/colorGrey" />
+
+            <TextView
+                android:id="@+id/buy_now"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:onClick="goToCart"
+                android:text="Approve Order"
+                android:textColor="@color/white"
+                android:textSize="@dimen/description_size14"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/feed_call"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/primaryDarkColor"
+                android:elevation="30dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/add_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:onClick="addToCart"
+                    android:text="Send FeedBack"
+                    android:textColor="@color/primaryDarkColor"
+                    android:textSize="@dimen/description_size14"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/make_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:onClick="goToCart"
+                    android:text="Make Call"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/description_size14"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!--    <View-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="@dimen/view_width_small"-->
+    <!--        android:layout_marginBottom="@dimen/paddingEight"-->
+    <!--        android:background="@color/primaryDarkColor" />-->
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="signupcard_margin">20dp</dimen>
+    <dimen name="cardElevation_gotozeal">3dp</dimen>
+    <dimen name="imageIconDimen">50dp</dimen>
+    <dimen name="imageIconDimen40">40dp</dimen>
+    <dimen name="paddingImage">10dp</dimen>
+    <dimen name="paddingImageminus">-10dp</dimen>
+    <dimen name="paddingEight">8dp</dimen>
+    <dimen name="padding4">4dp</dimen>
+    <dimen name="marginTop30">30dp</dimen>
+    <dimen name="marginTop15">15dp</dimen>
+    <dimen name="marginTop25">25dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="height2">2dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="height">200dp</dimen>
+    <dimen name="margin48">48dp</dimen>
+    <dimen name="Width160">160dp</dimen>
+    <dimen name="height190">190dp</dimen>
+    <dimen name="height1">1dp</dimen>
+    <dimen name="padding5">5dp</dimen>
+    <dimen name="thumbnail90">90dp</dimen>
+    <dimen name="thumbnail100">100dp</dimen>
+    <dimen name="title_size">17sp</dimen>
+    <dimen name="description_size">12sp</dimen>
+    <dimen name="description_size16">16sp</dimen>
+    <dimen name="description_size13">13sp</dimen>
+    <dimen name="description_size14">14sp</dimen>
+    <dimen name="description_size20">20sp</dimen>
+    <dimen name="description_size10">10sp</dimen>
+
+    <dimen name="view_width_small">1dp</dimen>
+
+</resources>

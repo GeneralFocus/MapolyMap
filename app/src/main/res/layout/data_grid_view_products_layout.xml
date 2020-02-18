@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:id="@+id/productContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewProductThumb"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/no_picture_available" />
+
+            <TextView
+                android:id="@+id/textViewNew"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:paddingStart="@dimen/paddingEight"
+                android:paddingTop="@dimen/padding4"
+                android:paddingEnd="@dimen/paddingEight"
+                android:paddingBottom="@dimen/padding4"
+                android:text="@string/new_product"
+                android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/textViewProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/paddingEight"
+            android:layout_marginLeft="@dimen/paddingEight"
+            android:layout_marginTop="@dimen/paddingEight"
+            android:layout_marginEnd="@dimen/paddingEight"
+            android:layout_marginRight="@dimen/paddingEight"
+            android:lines="2"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/textViewProductPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/paddingEight"
+            android:layout_marginLeft="@dimen/paddingEight"
+            android:layout_marginTop="@dimen/padding4"
+            android:layout_marginEnd="@dimen/paddingEight"
+            android:layout_marginRight="@dimen/paddingEight"
+            android:layout_marginBottom="@dimen/paddingEight"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/colorAccent" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

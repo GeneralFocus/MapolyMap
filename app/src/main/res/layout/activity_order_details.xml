@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.actionProductActivity.OrderDetails">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/CustomTheme"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:titleTextColor="#000">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order_history"
+                android:textSize="20sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/marginTop25"
+                    android:layout_height="@dimen/marginTop25"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="15dp"
+                    android:onClick="Notifications"
+                    app:srcCompat="@drawable/notification" />
+
+                <ImageView
+                    android:id="@+id/store_home"
+                    android:layout_width="@dimen/marginTop25"
+                    android:layout_height="@dimen/marginTop25"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:onClick="storeHome"
+                    app:srcCompat="@drawable/ic_store_black_24dp" />
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_cart_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarwrap"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"
+                app:srcCompat="@drawable/background_display" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transaction Successful"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/description_total_payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="₦132,500.00"
+                    android:textColor="@android:color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin">
+
+            <!--For Descirption-->
+            <com.github.florent37.expansionpanel.ExpansionHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:expansion_headerIndicator="@id/headerIndicatorDescription"
+                app:expansion_layout="@id/expansionLayoutDescription"
+                app:expansion_toggleOnClick="true">
+                <!-- HEADER -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transaction Details"
+                    android:textColor="@color/primaryDarkColor"
+                    android:textSize="@dimen/description_size16" />
+                <!-- HEADER INDICATOR -->
+                <ImageView
+                    android:id="@+id/headerIndicatorDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/app_name"
+                    app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+            </com.github.florent37.expansionpanel.ExpansionHeader>
+
+            <com.github.florent37.expansionpanel.ExpansionLayout
+                android:id="@+id/expansionLayoutDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!-- CONTENT -->
+                <TextView
+                    android:id="@+id/productdesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/u2022_regular_fit_full_sleeve"
+                    android:textColor="@color/description" />
+                <!-- END CONTENT -->
+            </com.github.florent37.expansionpanel.ExpansionLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_width_small"
+                android:layout_marginTop="2dp"
+                android:background="@color/grey_light" />
+
+            <!--For Reviews-->
+            <com.github.florent37.expansionpanel.ExpansionHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:expansion_headerIndicator="@id/headerIndicatorReview"
+                app:expansion_layout="@id/expansionLayoutReview"
+                app:expansion_toggleOnClick="true">
+                <!-- HEADER -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transaction Orders Summary"
+                    android:textColor="@color/primaryDarkColor"
+                    android:textSize="@dimen/description_size16" />
+                <!-- HEADER INDICATOR -->
+                <ImageView
+                    android:id="@+id/headerIndicatorReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/app_name"
+                    app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+            </com.github.florent37.expansionpanel.ExpansionHeader>
+
+            <com.github.florent37.expansionpanel.ExpansionLayout
+                android:id="@+id/expansionLayoutReview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!-- CONTENT -->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/productReviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <!-- END CONTENT -->
+            </com.github.florent37.expansionpanel.ExpansionLayout>
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnBuy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAccent"
+            android:onClick="ThankYou"
+            android:text="@string/thank_you"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

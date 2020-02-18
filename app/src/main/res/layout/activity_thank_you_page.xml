@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ThankYouPage">
+
+    <LinearLayout
+        android:id="@+id/activity_cart_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/trans_message_anime_payment"
+            android:layout_width="@dimen/Width160"
+            android:layout_height="@dimen/Width160"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:visibility="visible"
+            app:lottie_fileName="paymentmade.json"
+            app:srcCompat="@drawable/ic_local_mall_black_24dp" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/trans_message_anime_no_payment"
+            android:layout_width="@dimen/Width160"
+            android:layout_height="@dimen/Width160"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:visibility="visible"
+            app:lottie_fileName="nopaymentmade.json"
+            app:srcCompat="@drawable/ic_local_mall_black_24dp" />
+
+        <TextView
+            android:id="@+id/title_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Payment Successful"
+            android:textColor="@color/textColor"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/description_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="You paid ₦40,000 to GasperCloud, your product is being processed."
+            android:textColor="@color/textColor"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnThankYou"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAccent"
+            android:onClick="ThankYou"
+            android:text="@string/thank_you"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+</RelativeLayout>

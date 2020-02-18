@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.gaspercloud.gotozeal">
+
+    <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Required if your app targets Android 10 (API level 29) or higher -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <application
+        android:name=".ApplicationClass"
+        android:allowBackup="true"
+        android:icon="@drawable/gotozeal_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/gotozeal_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--
+           The API key for Google Maps-based APIs is defined as a string resource.
+           (See the file "res/values/google_maps_api.xml").
+           Note that the API key is linked to the encryption key used to sign the APK.
+           You need a different API key for each encryption key, including the release key that is used to
+           sign the APK for publishing.
+           You can define the keys for the debug and release targets in src/debug/ and src/release/.
+      -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".FashionMainActivity"
+            android:label="@string/title_activity_fashion_main"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".ThankYouPage"
+            android:parentActivityName=".HomeScreen"
+            android:theme="@style/WhiteTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gaspercloud.gotozeal.HomeScreen" />
+        </activity>
+        <activity
+            android:name=".ui.actionProductActivity.Orders"
+            android:parentActivityName=".HomeScreen"
+            android:theme="@style/WhiteTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeScreen" />
+        </activity>
+        <activity
+            android:name=".ui.actionProductActivity.OrderDetails"
+            android:parentActivityName=".ui.actionProductActivity.Orders"
+            android:theme="@style/WhiteTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.actionProductActivity.Orders" />
+        </activity>
+        <activity
+            android:name=".ui.actionProductActivity.PaymentActivity"
+            android:parentActivityName=".ui.actionProductActivity.Cart"
+            android:theme="@style/WhiteTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.actionProductActivity.Cart" />
+        </activity>
+
+        <meta-data
+            android:name="co.paystack.android.PublicKey"
+            android:value="@string/paystack_public_key" />
+
+        <activity
+            android:name=".ui.actionProductActivity.Cart"
+            android:theme="@style/WhiteTheme" />
+        <activity
+            android:name=".ui.actionProductActivity.SingleProductActivity"
+            android:parentActivityName=".HomeScreen"
+            android:theme="@style/WhiteTheme">
+            <!--            <meta-data-->
+            <!--                android:name="android.support.PARENT_ACTIVITY"-->
+            <!--                android:value="com.gaspercloud.gotozeal.HomeScreen" />-->
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+        <activity
+            android:name=".HomeScreen"
+            android:label="@string/title_activity_home_screen"
+            android:parentActivityName=".Signup_gotozeal"
+            android:theme="@style/AppTheme.NoActionBar">
+        -->
+        <activity
+            android:name=".HomeScreen"
+            android:label="@string/title_activity_home_screen"
+            android:parentActivityName=".Signup_gotozeal"
+            android:theme="@style/WhiteTheme">
+            <!--            <meta-data-->
+            <!--                android:name="android.app.searchable"-->
+            <!--                android:resource="@xml/searchable" />-->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gaspercloud.gotozeal.Signup_gotozeal" />
+        </activity>
+        <activity
+            android:name=".Signup_gotozeal"
+            android:theme="@style/SignUpAppTheme">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+
+
+        <activity
+            android:name=".FashionAdd_gotozeal"
+            android:parentActivityName=".FashionMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gaspercloud.gotozeal.FashionMainActivity" />
+        </activity>
+        <activity
+            android:name=".ui.actionProductActivity.ReviewProducts"
+            android:parentActivityName=".FashionMainActivity"
+            android:theme="@style/WhiteTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gaspercloud.gotozeal.FashionMainActivity" />
+        </activity>
+
+        <receiver android:name=".GeofenceBroadcastReceiver" />
+
+    </application>
+
+</manifest>

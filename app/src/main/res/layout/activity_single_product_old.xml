@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_item_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".ui.actionProductActivity.SingleProductActivityOLD">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="58dp"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="20sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <!--                <ImageView-->
+                <!--                    android:layout_width="20dp"-->
+                <!--                    android:layout_height="20dp"-->
+                <!--                    android:layout_marginStart="5dp"-->
+                <!--                    android:layout_marginLeft="5dp"-->
+                <!--                    android:layout_marginEnd="15dp"-->
+                <!--                    android:layout_marginRight="15dp"-->
+                <!--                    android:onClick="Notifications"-->
+                <!--                    app:srcCompat="@drawable/notification" />-->
+
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scrollbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9.5"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp">
+
+                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    tools:context="com.androidtutorialpoint.googlemapsdistancecalculator.MapsActivity" />
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/show_distance_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ff0000"
+                        android:textColorHighlight="@android:color/primary_text_dark"
+                        android:textSize="18sp" />
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true">
+
+                        <Button
+                            android:id="@+id/btnDriving"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Driving Mode" />
+
+                        <Button
+                            android:id="@+id/btnWalk"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Walking Mode" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/productimage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_add_shopping_cart_black_24dp" />
+
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/productimage_slider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height"
+                android:visibility="gone"
+                app:auto_cycle="true"
+                app:pager_animation="Default"
+                app:pager_animation_span="1100"
+                tools:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/productname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Denim Shirt"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/productprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="# 1,979"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/old_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/price_message"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/description_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hideQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:text="Quantity: "
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/decrementQuantity"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#eeeeee"
+                    android:onClick="decrement"
+                    android:text="-"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/quantityProductPage"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    tools:text="1" />
+
+                <Button
+                    android:id="@+id/incrementQuantity"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#eeeeee"
+                    android:onClick="increment"
+                    android:text="+"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_width_small"
+                android:layout_marginTop="8dp"
+                android:background="@color/grey_light" />
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="30dp"-->
+            <!--                android:layout_marginTop="8dp"-->
+            <!--                android:orientation="horizontal"-->
+            <!--                android:weightSum="3">-->
+
+            <!--                <LinearLayout-->
+            <!--                    android:id="@+id/layout_action1"-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:onClick="shareProduct"-->
+            <!--                    android:orientation="horizontal"-->
+            <!--                    android:weightSum="2">-->
+
+            <!--                    <ImageView-->
+            <!--                        android:layout_width="30dp"-->
+            <!--                        android:layout_height="30dp"-->
+            <!--                        app:srcCompat="@android:drawable/ic_menu_share" />-->
+
+            <!--                    <TextView-->
+            <!--                        android:id="@+id/text_action1"-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginLeft="8dp"-->
+            <!--                        android:layout_weight="1"-->
+            <!--                        android:gravity="left"-->
+            <!--                        android:text="Share"-->
+            <!--                        android:textColor="@color/primaryDarkColor"-->
+            <!--                        android:textSize="@dimen/description_size" />-->
+            <!--                </LinearLayout>-->
+
+            <!--                <View-->
+            <!--                    android:layout_width="@dimen/view_width_small"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:background="@color/grey_light" />-->
+
+            <!--<LinearLayout
+                android:id="@+id/layout_action2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="similarProduct"
+                android:orientation="horizontal"
+                android:weightSum="2">-->
+            <!--                <LinearLayout-->
+            <!--                    android:id="@+id/layout_action2"-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:orientation="horizontal"-->
+            <!--                    android:weightSum="2">-->
+
+            <!--                    <RatingBar-->
+            <!--                        android:id="@+id/ratingBar_single"-->
+            <!--                        style="?android:attr/ratingBarStyleSmall"-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:isIndicator="true"-->
+            <!--                        android:stepSize="1.0" />-->
+
+            <!--
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/similar" />
+
+            <TextView
+                android:id="@+id/text_action2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="@string/similar"
+                android:textColor="@color/primaryDarkColor"
+                android:textSize="@dimen/description_size" />
+            -->
+            <!--                </LinearLayout>-->
+
+            <!--                <View-->
+            <!--                    android:layout_width="@dimen/view_width_small"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:background="@color/grey_light" />-->
+
+            <!--                <LinearLayout-->
+            <!--                    android:id="@+id/layout_action3"-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:onClick="addToWishList"-->
+            <!--                    android:orientation="horizontal"-->
+            <!--                    android:weightSum="2">-->
+
+            <!--                    <com.airbnb.lottie.LottieAnimationView-->
+            <!--                        android:id="@+id/add_to_wishlist"-->
+            <!--                        android:layout_width="40dp"-->
+            <!--                        android:layout_height="40dp"-->
+            <!--                        android:foregroundGravity="center"-->
+            <!--                        android:visibility="visible"-->
+            <!--                        app:lottie_fileName="heart.json"-->
+            <!--                        app:srcCompat="@drawable/cartempty" />-->
+
+            <!--                    <TextView-->
+            <!--                        android:id="@+id/text_action3"-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginLeft="8dp"-->
+            <!--                        android:layout_weight="1"-->
+            <!--                        android:gravity="left"-->
+            <!--                        android:text="Wishlist"-->
+            <!--                        android:textColor="@color/primaryDarkColor"-->
+            <!--                        android:textSize="12dp" />-->
+            <!--                </LinearLayout>-->
+
+            <!--            </LinearLayout>-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_width_small"
+                android:layout_marginTop="8dp"
+                android:background="@color/grey_light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_vertical_margin">
+
+                <!--For Descirption-->
+                <com.github.florent37.expansionpanel.ExpansionHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:expansion_headerIndicator="@id/headerIndicatorDescription"
+                    app:expansion_layout="@id/expansionLayoutDescription"
+                    app:expansion_toggleOnClick="true">
+                    <!-- HEADER -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/view_description"
+                        android:textColor="@color/primaryDarkColor"
+                        android:textSize="@dimen/description_size16" />
+                    <!-- HEADER INDICATOR -->
+                    <ImageView
+                        android:id="@+id/headerIndicatorDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+                </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                <com.github.florent37.expansionpanel.ExpansionLayout
+                    android:id="@+id/expansionLayoutDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:expansion_expanded="true">
+                    <!-- CONTENT -->
+                    <TextView
+                        android:id="@+id/productdesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/u2022_regular_fit_full_sleeve"
+                        android:textColor="@color/description" />
+                    <!-- END CONTENT -->
+                </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_width_small"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/grey_light" />
+
+                <!--For Reviews-->
+                <!--                <com.github.florent37.expansionpanel.ExpansionHeader-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    app:expansion_headerIndicator="@id/headerIndicatorReview"-->
+                <!--                    app:expansion_layout="@id/expansionLayoutReview"-->
+                <!--                    app:expansion_toggleOnClick="true">-->
+                <!-- HEADER -->
+                <!--                    <TextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="Reviews"-->
+                <!--                        android:textColor="@color/primaryDarkColor"-->
+                <!--                        android:textSize="@dimen/description_size16" />-->
+                <!-- HEADER INDICATOR -->
+                <!--                    <ImageView-->
+                <!--                        android:id="@+id/headerIndicatorReview"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_gravity="center_vertical|right"-->
+                <!--                        android:layout_marginStart="16dp"-->
+                <!--                        android:layout_marginLeft="16dp"-->
+                <!--                        android:adjustViewBounds="true"-->
+                <!--                        android:contentDescription="@string/app_name"-->
+                <!--                        app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />-->
+                <!--                </com.github.florent37.expansionpanel.ExpansionHeader>-->
+
+                <!--                <com.github.florent37.expansionpanel.ExpansionLayout-->
+                <!--                    android:id="@+id/expansionLayoutReview"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content">-->
+                <!-- CONTENT -->
+
+                <!--                    <androidx.recyclerview.widget.RecyclerView-->
+                <!--                        android:id="@+id/productReviews"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content" />-->
+                <!-- END CONTENT -->
+                <!--                </com.github.florent37.expansionpanel.ExpansionLayout>-->
+
+
+            </LinearLayout>
+            <!--
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/view_width_small"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/grey_light" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:text="Your Custom Message"
+                                        android:textColor="@color/primaryDarkColor"
+                                        android:textSize="16dp" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/view_width_small"
+                                        android:layout_marginTop="2dp"
+                                        android:background="@color/grey_light" />
+
+                                    <com.github.florent37.materialtextfield.MaterialTextField
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:mtf_image="@drawable/headertext"
+                                        app:mtf_labelColor="#34495e">
+
+                                        <EditText
+                                            android:id="@+id/customheader"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="Header"
+                                            android:inputType="textMultiLine"
+                                            android:maxLines="3"
+                                            android:minLines="2"
+                                            android:scrollbars="vertical"
+                                            android:textColor="#424242"
+                                            android:textSize="15sp" />
+
+                                    </com.github.florent37.materialtextfield.MaterialTextField>
+
+                                    <com.github.florent37.materialtextfield.MaterialTextField
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="30dp"
+                                        app:mtf_image="@drawable/bubble"
+                                        app:mtf_labelColor="#34495e">
+
+                                        <EditText
+                                            android:id="@+id/custommessage"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="Content"
+                                            android:inputType="textMultiLine"
+                                            android:maxLines="10"
+                                            android:minLines="6"
+                                            android:scrollbars="vertical"
+                                            android:textColor="#424242"
+                                            android:textSize="15sp" />
+
+                                    </com.github.florent37.materialtextfield.MaterialTextField>
+                        -->
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:background="@color/primaryDarkColor"
+        android:elevation="30dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/add_to_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Call HelpDesk"
+            android:textColor="@color/primaryDarkColor"
+            android:textSize="@dimen/description_size14"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/buy_now"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:onClick="goToCart"
+            android:text="Reached Destination"
+            android:textColor="@color/white"
+            android:textSize="@dimen/description_size14"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</LinearLayout>

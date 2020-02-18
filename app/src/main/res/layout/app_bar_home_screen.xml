@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeScreen">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height"
+        android:background="@drawable/gradient_background"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/white"
+            app:expandedTitleMarginEnd="@android:dimen/notification_large_icon_height"
+            app:expandedTitleMarginStart="@dimen/margin48"
+            app:expandedTitleTextAppearance="@color/transparent"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll">
+
+            <!--            <RelativeLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content">-->
+
+            <!--                <com.daimajia.slider.library.SliderLayout-->
+            <!--                    android:id="@+id/slider"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="@dimen/height"-->
+            <!--                    app:auto_cycle="true"-->
+            <!--                    app:pager_animation="Default"-->
+            <!--                    app:pager_animation_span="1100" />-->
+            <!--ImageView
+                android:id="@+id/backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"
+                app:srcCompat="@drawable/background_display" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@android:color/white"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/description_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/register_success_message"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+            </LinearLayout-->
+            <!--            </RelativeLayout>-->
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/CustomTheme"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/primaryColor"
+                android:gravity="start"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <TextView
+                    android:id="@+id/appname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:padding="5dp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="28sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <!--                    <com.airbnb.lottie.LottieAnimationView-->
+                    <!--                        android:id="@+id/notifintro"-->
+                    <!--                        android:layout_width="25dp"-->
+                    <!--                        android:layout_height="25dp"-->
+                    <!--                        android:layout_marginStart="@dimen/padding5"-->
+                    <!--                        android:layout_marginLeft="@dimen/padding5"-->
+                    <!--                        android:layout_marginEnd="@dimen/paddingImage"-->
+                    <!--                        android:layout_marginRight="@dimen/paddingImage"-->
+                    <!--                        android:onClick="Notifications"-->
+                    <!--                        app:lottie_autoPlay="true"-->
+                    <!--                        app:lottie_fileName="ripple.json"-->
+                    <!--                        app:lottie_loop="true"-->
+                    <!--                        app:srcCompat="@android:drawable/ic_notification_overlay" />-->
+
+                    <!--                    <ImageView-->
+                    <!--                        android:layout_width="@dimen/marginTop25"-->
+                    <!--                        android:layout_height="@dimen/marginTop25"-->
+                    <!--                        android:layout_marginStart="15dp"-->
+                    <!--                        android:layout_marginLeft="5dp"-->
+                    <!--                        android:layout_marginEnd="5dp"-->
+                    <!--                        android:layout_marginRight="15dp"-->
+                    <!--                        android:onClick="Notifications"-->
+                    <!--                        app:srcCompat="@drawable/notification" />-->
+
+                    <!--ImageView
+                        android:id="@+id/cart"
+                        android:layout_width="@dimen/marginTop25"
+                        android:layout_height="@dimen/marginTop25"
+                        android:layout_marginStart="@dimen/marginTop15"
+                        android:layout_marginLeft="@dimen/marginTop15"
+                        android:layout_marginEnd="@dimen/marginTop15"
+                        android:layout_marginRight="@dimen/marginTop15"
+                        android:onClick="viewCart"
+                        app:srcCompat="@drawable/ic_shopping_cart_black_24dp" /-->
+
+
+                    <ImageView
+                        android:id="@+id/logOut"
+                        android:layout_width="@dimen/marginTop25"
+                        android:layout_height="@dimen/marginTop25"
+                        android:layout_marginStart="@dimen/marginTop15"
+                        android:layout_marginLeft="@dimen/marginTop15"
+                        android:layout_marginEnd="@dimen/marginTop15"
+                        android:layout_marginRight="@dimen/marginTop15"
+                        android:onClick="LogOutView"
+                        app:srcCompat="@drawable/logout" />
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        layout="@layout/content_home_screen"
+        android:background="@color/white" />
+
+    <!--com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" /-->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

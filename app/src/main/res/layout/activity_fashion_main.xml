@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FashionMainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/CustomTheme"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primaryColor"
+            android:gravity="start"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <TextView
+                android:id="@+id/appname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="5dp"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="28sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <!--                    <com.airbnb.lottie.LottieAnimationView-->
+                <!--                        android:id="@+id/notifintro"-->
+                <!--                        android:layout_width="25dp"-->
+                <!--                        android:layout_height="25dp"-->
+                <!--                        android:layout_marginStart="@dimen/padding5"-->
+                <!--                        android:layout_marginLeft="@dimen/padding5"-->
+                <!--                        android:layout_marginEnd="@dimen/paddingImage"-->
+                <!--                        android:layout_marginRight="@dimen/paddingImage"-->
+                <!--                        android:onClick="Notifications"-->
+                <!--                        app:lottie_autoPlay="true"-->
+                <!--                        app:lottie_fileName="ripple.json"-->
+                <!--                        app:lottie_loop="true"-->
+                <!--                        app:srcCompat="@android:drawable/ic_notification_overlay" />-->
+
+                <!--                <ImageView-->
+                <!--                    android:layout_width="@dimen/marginTop25"-->
+                <!--                    android:layout_height="@dimen/marginTop25"-->
+                <!--                    android:layout_marginStart="15dp"-->
+                <!--                    android:layout_marginLeft="5dp"-->
+                <!--                    android:layout_marginEnd="5dp"-->
+                <!--                    android:layout_marginRight="15dp"-->
+                <!--                    android:onClick="Notifications"-->
+                <!--                    app:srcCompat="@drawable/notification" />-->
+
+                <ImageView
+                    android:id="@+id/cart"
+                    android:layout_width="@dimen/marginTop25"
+                    android:layout_height="@dimen/marginTop25"
+                    android:layout_marginStart="@dimen/marginTop15"
+                    android:layout_marginLeft="@dimen/marginTop15"
+                    android:layout_marginEnd="@dimen/marginTop15"
+                    android:layout_marginRight="@dimen/marginTop15"
+                    android:onClick="viewCart"
+                    app:srcCompat="@drawable/home" />
+
+
+                <ImageView
+                    android:id="@+id/logOut"
+                    android:layout_width="@dimen/marginTop25"
+                    android:layout_height="@dimen/marginTop25"
+                    android:layout_marginStart="@dimen/marginTop15"
+                    android:layout_marginLeft="@dimen/marginTop15"
+                    android:layout_marginEnd="@dimen/marginTop15"
+                    android:layout_marginRight="@dimen/marginTop15"
+                    android:onClick="LogOutView"
+                    app:srcCompat="@drawable/logout" />
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <!--        <androidx.appcompat.widget.Toolbar-->
+        <!--            android:id="@+id/toolbar"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="?attr/actionBarSize"-->
+        <!--            android:background="?attr/colorPrimary"-->
+        <!--            app:popupTheme="@style/AppTheme.PopupOverlay" />-->
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_fashion_main" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="@color/primaryColor"
+        app:srcCompat="@drawable/ic_add_box_white_24dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

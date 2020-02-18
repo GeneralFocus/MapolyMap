@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "606778559459",
+    "firebase_url": "https://gotozeal.firebaseio.com",
+    "project_id": "gotozeal",
+    "storage_bucket": "gotozeal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:606778559459:android:637dc01ed8e420799faed6",
+        "android_client_info": {
+          "package_name": "com.gaspercloud.gotozeal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "606778559459-s1sl3do7kom2hrul1l4b3c370oikhmbb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gaspercloud.gotozeal",
+            "certificate_hash": "9af9050ef62795f0d549b822e9ef3868e46b5a59"
+          }
+        },
+        {
+          "client_id": "606778559459-otcdmlpn8oj93eag3kb4o8gml1ql9e75.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALDzsnG7EEm2E0nbi_Yo6p_J1AWT302TQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "606778559459-otcdmlpn8oj93eag3kb4o8gml1ql9e75.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
